@@ -1,0 +1,175 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+
+    /* Font selection*/
+    --Transparent-white: hsla(0, 0%, 100%, 0.75); /* for the paragraphs*/
+    --Very-light-gray: hsl(0, 0%, 95%); /*backgrounds, headings, buttons*/
+}
+/*font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif;*/
+
+html{
+    box-sizing: border-box;
+}
+
+
+/*styling the page display, font-family, font-size, text-color */
+body{
+    background-color: var(--Very-light-gray);
+    font-size: 15px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h1{
+    color: var(--Very-light-gray);
+    font-family: 'Big Shoulders Display', 'cursive';
+    text-transform: uppercase;
+    font-size: 1.7rem;
+}
+p{
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 0.8rem;
+    color: var(--Transparent-white);
+    padding: 1.5625rem 0;
+    line-height: 1.25rem;
+}
+
+main{
+    display: flex;
+    max-width: 50rem;
+}
+.product-card{
+    padding: 2.5rem;
+    max-width: 18.75rem;
+}
+
+.orange-container{
+    background-color: var(--Bright-orange);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.cyan-container{
+    background-color: var(--Dark-cyan);
+}
+.dark-cyan-container{
+    background-color: var(--Very-dark-cyan);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.icon-container{
+    padding-bottom: 1.5625rem;
+}
+.product-desc{
+    height: 70%;
+    /* padding-bottom: 0.7rem; */
+}
+.btn-container{
+    display: flex;
+    padding-bottom: 2.5rem;
+}
+.product-btn{
+    background-color: var(--Very-light-gray);
+    height: 2rem;
+    width: 6.875rem;
+    border-radius: 3rem;
+    border: none;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 0.85rem;
+    margin-bottom: 1.2rem;
+}
+.orange-btn{
+    color: var(--Bright-orange);
+}
+.cyan-btn{
+    color: var(--Dark-cyan);
+}
+.dark-cyan-btn{
+    color: var(--Very-dark-cyan);
+}
+.product-btn:hover{
+    background-color: inherit;
+    color: var(--Very-light-gray);
+    border: 1px solid var(--Very-light-gray);
+    cursor: pointer;
+}
+
+.attribution{
+    margin-top: 1rem;
+}
+
+@media only screen and (max-width: 500px) {
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 60px 20px;
+    }
+    .orange-container{
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+    .dark-cyan-container{
+        border-bottom-left-radius: 10px;
+        border-top-right-radius: 0;
+    }
+    .btn-container{
+        padding-bottom: 0;
+    }
+    .product-btn{
+        margin-top: 1rem;
+    }
+}
